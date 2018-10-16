@@ -52,6 +52,6 @@ struct Language: Codable {
 }
 
 enum Status: String {
-    case Rumored, Planned,In Production, Post Production, Released, Canceled
+    case Rumored, Planned,InProduction, PostProduction, Released, Canceled
 }
 
