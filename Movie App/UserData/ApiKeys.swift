@@ -12,4 +12,7 @@ enum Environment {
     case Development, Production
 }
 
+enum Urls {
+    static let BASE_URL = "https://api.themoviedb.org/3/"
+}
 
