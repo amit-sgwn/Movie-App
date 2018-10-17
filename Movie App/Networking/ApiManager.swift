@@ -24,6 +24,7 @@ class NetworkManager {
         self.baseURL = baseURL
     }
     
+    //MARK:- Utility methods
     func getSessionId()  {
         
     }
