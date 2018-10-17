@@ -12,16 +12,21 @@ class NetworkManager {
     
     // MARK: - Properties
     
-    static let shared = NetworkManager(baseURL: API.baseURL)
+    static let shared = NetworkManager(baseURL: Urls.BASE_URL)
     
     // MARK: -
     
-    let baseURL: URL
+    let baseURL: String
     
     // Initialization
     
-    private init(baseURL: URL) {
+    private init(baseURL: String) {
         self.baseURL = baseURL
     }
     
+    func getSessionId()  {
+        
+    }
+    
 }
+
