@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B20FB4DA21777C34000799A9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB4D921777C34000799A9 /* UserDefaults.swift */; };
 		B20FB4DC21777D0E000799A9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB4DB21777D0E000799A9 /* UserDefaultsKeys.swift */; };
+		B20FB4DE21785E11000799A9 /* MovieDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB4DD21785E11000799A9 /* MovieDataBaseService.swift */; };
 		B24634B12171B951003FA4A4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24634B02171B951003FA4A4 /* Movie.swift */; };
 		B24634B32171BB3D003FA4A4 /* ProductionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24634B22171BB3D003FA4A4 /* ProductionModel.swift */; };
 		B2944641217644E0008011FC /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2944640217644E0008011FC /* ApiKeys.swift */; };
@@ -27,6 +28,7 @@
 		9770ADAEC936EEFC4682AB4C /* Pods-Movie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie App/Pods-Movie App.release.xcconfig"; sourceTree = "<group>"; };
 		B20FB4D921777C34000799A9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		B20FB4DB21777D0E000799A9 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		B20FB4DD21785E11000799A9 /* MovieDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataBaseService.swift; sourceTree = "<group>"; };
 		B24634B02171B951003FA4A4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B24634B22171BB3D003FA4A4 /* ProductionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionModel.swift; sourceTree = "<group>"; };
 		B2944640217644E0008011FC /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B2944642217644F9008011FC /* ApiManager.swift */,
+				B20FB4DD21785E11000799A9 /* MovieDataBaseService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B20FB4DC21777D0E000799A9 /* UserDefaultsKeys.swift in Sources */,
 				B20FB4DA21777C34000799A9 /* UserDefaults.swift in Sources */,
 				B2E158892171B192007C8A93 /* AppDelegate.swift in Sources */,
+				B20FB4DE21785E11000799A9 /* MovieDataBaseService.swift in Sources */,
 				B2C3A57E21722AE70047923E /* UserModel.swift in Sources */,
 				B24634B12171B951003FA4A4 /* Movie.swift in Sources */,
 			);
