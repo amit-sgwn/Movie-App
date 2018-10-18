@@ -10,10 +10,27 @@ import Foundation
 import Moya
 
 
+// This is target Api
 public enum MovieDB {
     //1
     static private let publicKey = ""  //put your keys here
     static private let privateKey = "" // put your private keys here
     // 2
-    case movie
+    case movie(String)
+}
+
+
+extension MovieDB: TargetType {
+    
+    // Base Url
+    public var baseUrl: URL {
+        return URL(string: "https://api.themoviedb.org/3/")
+    }
+    
+    public var path: String {
+        switch self {
+        case .movie(let movieId):
+                return "/movie/\(movieId)"
+        }
+    }
 }
