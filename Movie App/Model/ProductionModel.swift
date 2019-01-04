@@ -21,8 +21,7 @@ struct ProductionCompany: Codable {
     var logoPath : String?
     var originCountry: String
     
-    enum CodingKeys: String, CodingKey
-    {
+    enum CodingKeys: String, CodingKey {
         case logoPath = "logo_path"
         case originCountry =  "origin_country"
         case id

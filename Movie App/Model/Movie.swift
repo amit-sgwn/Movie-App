@@ -34,6 +34,10 @@ struct Movie: Codable {
     var video: Bool
     var voteAverage: UInt
     var voteCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case isAdult = "isAdult"
+    }
 }
 
 
