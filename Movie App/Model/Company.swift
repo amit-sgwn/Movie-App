@@ -19,7 +19,7 @@ struct Company: Codable {
     var originCountry: String?
     var parentCompany: Company?
     
-    enum CodingKeys: String, CodingKey {
+    enum CompanyCodingKeys: String, CodingKey {
         case id
         case description
         case headquarters
@@ -28,6 +28,21 @@ struct Company: Codable {
         case name
         case originCountry = "origin_country"
         case parentCompany = "parent_company"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CompanyCodingKeys.self)
+        
+        id = try container.decode(Int.self, forKey: .id)
+        description = try container.decode(String.self, forKey: .description)
+        headquarters = try container.decode(Int.self, forKey: .headquarters)
+        homepage = try container.decode(Int.self, forKey: .homepage)
+        logoPath = try container.decode(Int.self, forKey: .logoPath)
+        name = try container.decode(Int.self, forKey: .name)
+        originCountry = try container.decode(Int.self, forKey: .originCountry)
+        parentCompany = try container.decode(Int.self, forKey: .parentCompany)
+
+        
     }
     
 }
