@@ -3,7 +3,7 @@
 //  Movie App
 //
 //  Created by Amit Kumar on 04/01/19.
-//  Copyright © 2019 Box8. All rights reserved.
+//  Copyright © 2019 IndusUnicorn. All rights reserved.
 //
 
 import Foundation
