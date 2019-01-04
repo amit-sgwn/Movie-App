@@ -14,7 +14,12 @@ struct Credit: Codable {
 
 
 struct Media: Codable {
-    
+    var id: Int?
+    var name: String?
+    var originalName: String?
+    var character: String?
+    var episodes: [Episode]
+    var seasons: [Season]?
 }
 
 
@@ -42,4 +47,9 @@ struct Season: Codable {
 struct Person: Codable {
     var name: String?
     var id: Int?
+}
+
+
+struct Episode: Codable {
+    
 }

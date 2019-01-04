@@ -35,12 +35,12 @@ struct Company: Codable {
         
         id = try container.decode(Int.self, forKey: .id)
         description = try container.decode(String.self, forKey: .description)
-        headquarters = try container.decode(Int.self, forKey: .headquarters)
-        homepage = try container.decode(Int.self, forKey: .homepage)
-        logoPath = try container.decode(Int.self, forKey: .logoPath)
-        name = try container.decode(Int.self, forKey: .name)
-        originCountry = try container.decode(Int.self, forKey: .originCountry)
-        parentCompany = try container.decode(Int.self, forKey: .parentCompany)
+        headquarters = try container.decode(String.self, forKey: .headquarters)
+        homepage = try container.decode(String.self, forKey: .homepage)
+        logoPath = try container.decode(String.self, forKey: .logoPath)
+        name = try container.decode(String.self, forKey: .name)
+        originCountry = try container.decode(String.self, forKey: .originCountry)
+        parentCompany = try container.decode(String.self, forKey: .parentCompany)
 
         
     }
