@@ -29,6 +29,19 @@ struct User: Codable {
         
     }
     
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        userName = try container.decode(String.self, forKey: .userName)
+        avatar = try container.decode(Avatar.self, forKey: .avatar)
+        id = try container.decode(Int.self, forKey: .id)
+        userName = try container.decode(String.self, forKey: .userName)
+        includeAdult = try container.decode(String.self, forKey: .includeAdult)
+        countryCode = try container.decode(String.self, forKey: .countryCode)
+        languageCode = try container.decode(String.self, forKey: .languageCode)
+
+    }
+    
 }
 
 struct Avatar: Codable {
