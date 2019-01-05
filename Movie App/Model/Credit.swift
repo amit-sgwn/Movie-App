@@ -10,6 +10,36 @@ import Foundation
 
 struct Credit: Codable {
     
+    var creditType: String?
+    var department: String?
+    var job: String?
+    var media: Media?
+    var mediaType: String?
+    var id: String?
+    var person: Person?
+    
+    enum CreditCodingKeys: String, CodingKey {
+        case creditType = "credit_type"
+        case department
+        case job
+        case media
+        case mediaType = "media_type"
+        case id
+        case person
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CreditCodingKeys.self)
+        
+        id = try container.decode(String.self, forKey: .id)
+        department = try container.decode(String.self, forKey: .department)
+        job = try container.decode(String.self, forKey: .job)
+        creditType = try container.decode(String.self, forKey: .creditType)
+        media = try container.decode(Media.self, forKey: .media)
+        mediaType = try container.decode(String.self, forKey: .mediaType)
+        person = try container.decode(Person.self, forKey: .person)
+
+    }
 }
 
 
