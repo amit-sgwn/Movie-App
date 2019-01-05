@@ -44,18 +44,18 @@ struct Episode: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: EpisodeCodingKey.self)
         
-        airDate = try container.decode(Date.self, forKey: .airDate)
-        episodeNumber = try container.decode(Int.self, forKey: .episodeNumber)
+        airDate         = try container.decode(Date.self, forKey: .airDate)
+        episodeNumber   = try container.decode(Int.self, forKey: .episodeNumber)
         producationCode = try container.decode(String.self, forKey: .producationCode)
-        seasonNumber = try container.decode(Int.self, forKey: .seasonNumber)
-        stillPath   = try container.decode(String.self, forKey: .stillPath)
-        voteCount = try container.decode(Int.self, forKey: .voteCount)
-        voteAverage = try container.decode(UInt.self, forKey: .voteAverage)
-        crew = try container.decode([Crew].self, forKey: .crew)
-        guestStars = try container.decode([Star].self, forKey: .guestStars)
-        overView = try container.decode(String.self, forKey: .overView)
-        name = try container.decode(String.self, forKey: .name)
-        id = try container.decode(Int.self, forKey: .id)
+        seasonNumber    = try container.decode(Int.self, forKey: .seasonNumber)
+        stillPath       = try container.decode(String.self, forKey: .stillPath)
+        voteCount       = try container.decode(Int.self, forKey: .voteCount)
+        voteAverage     = try container.decode(UInt.self, forKey: .voteAverage)
+        crew            = try container.decode([Crew].self, forKey: .crew)
+        guestStars      = try container.decode([Star].self, forKey: .guestStars)
+        overView        = try container.decode(String.self, forKey: .overView)
+        name            = try container.decode(String.self, forKey: .name)
+        id              = try container.decode(Int.self, forKey: .id)
 
     }
 }
