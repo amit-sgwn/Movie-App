@@ -18,8 +18,29 @@ struct Media: Codable {
     var name: String?
     var originalName: String?
     var character: String?
-    var episodes: [Episode]
+    var episodes: [Episode]?
     var seasons: [Season]?
+    
+    enum MediaCodingKeys: String, CodingKey {
+        case id
+        case name
+        case originalName = "original_name"
+        case character
+        case episodes
+        case seasons
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: MediaCodingKeys.self)
+
+        id = try container.decode(Int.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        originalName = try container.decode(String.self, forKey: .originalName)
+        character = try container.decode(String.self, forKey: .character)
+        episodes = try container.decode([Episode].self, forKey: .episodes)
+        seasons = try container.decode([Season].self, forKey: .seasons)
+
+    }
 }
 
 
