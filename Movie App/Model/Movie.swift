@@ -27,7 +27,7 @@ struct Movie: Codable {
     var releaseDate: Date
     var revenue: Int
     var runTime: Int
-    var spokenLanguages: Languages
+    var spokenLanguages: Language
     var status: Status
     var tagLine: String?
     var title: String?
@@ -35,8 +35,9 @@ struct Movie: Codable {
     var voteAverage: UInt
     var voteCount: Int
     
-    enum CodingKeys: String, CodingKey {
+    enum MovieCodingKeys: String, CodingKey {
         case isAdult = "isAdult"
+        
     }
 }
 

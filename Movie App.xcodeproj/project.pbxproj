@@ -13,6 +13,7 @@
 		B226870B21E0607700D66247 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226870A21E0607700D66247 /* Episode.swift */; };
 		B226870D21E0609200D66247 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226870C21E0609200D66247 /* Season.swift */; };
 		B226871021E0612900D66247 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226870F21E0612900D66247 /* Crew.swift */; };
+		B226871221E071ED00D66247 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = B226871121E071ED00D66247 /* Star.swift */; };
 		B24634B12171B951003FA4A4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24634B02171B951003FA4A4 /* Movie.swift */; };
 		B24634B32171BB3D003FA4A4 /* ProductionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24634B22171BB3D003FA4A4 /* ProductionModel.swift */; };
 		B2944641217644E0008011FC /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2944640217644E0008011FC /* ApiKeys.swift */; };
@@ -37,6 +38,7 @@
 		B226870A21E0607700D66247 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		B226870C21E0609200D66247 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		B226870F21E0612900D66247 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		B226871121E071ED00D66247 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		B24634B02171B951003FA4A4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B24634B22171BB3D003FA4A4 /* ProductionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionModel.swift; sourceTree = "<group>"; };
 		B2944640217644E0008011FC /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				B226870F21E0612900D66247 /* Crew.swift */,
+				B226871121E071ED00D66247 /* Star.swift */,
 			);
 			path = CastingModel;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				B226870D21E0609200D66247 /* Season.swift in Sources */,
 				B24634B12171B951003FA4A4 /* Movie.swift in Sources */,
 				B226871021E0612900D66247 /* Crew.swift in Sources */,
+				B226871221E071ED00D66247 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
