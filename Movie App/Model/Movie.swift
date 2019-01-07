@@ -9,6 +9,7 @@
 import Foundation
 
 struct Movie: Codable {
+    
     var isAdult: Bool
     var backDropPath : String?
     var belongToCollection: AnyObject?
