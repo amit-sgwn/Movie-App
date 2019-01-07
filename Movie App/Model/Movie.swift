@@ -16,7 +16,7 @@ struct Movie: Codable {
     var budget : Int
     var homePage: String?
     var id: Int
-    var imdbId: String?
+    var imdbId: String?  //minLength: 9 maxLength: 9 pattern: ^tt[0-9]{7}
     var originalLanguage: String
     var originalTitle: String
     var overView: String
@@ -36,8 +36,24 @@ struct Movie: Codable {
     var voteCount: Int
     
     enum MovieCodingKeys: String, CodingKey {
-        case isAdult = "isAdult"
-        
+        case isAdult = "adult"
+        case backDropPath = "backdrop_path"
+        case belongToCollection = "belongs_to_collection"
+        case budget
+        case genres
+        case homePage = "homepage"
+        case id
+        case imdbId = "imdb_id"
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case overView = "overview"
+        case popularity
+        case posterPath = "poster_path"
+        case producationCopanies = "production_companies"
+        case producationCountries = "production_countries"
+        case releaseDate = "release_date"
+        case revenue
+        case runTime = "runtime"
     }
 }
 
