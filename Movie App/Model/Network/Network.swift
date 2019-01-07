@@ -23,4 +23,15 @@ struct Network: Codable {
         case originCountry = "origin_country"
     }
     
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: NetworkCodingKey.self)
+
+        headquarters       = try container.decode(String.self, forKey: .headquarters)
+        homePage       = try container.decode(String.self, forKey: .homePage)
+        id       = try container.decode(Int.self, forKey: .id)
+        name       = try container.decode(String.self, forKey: .name)
+        originCountry       = try container.decode(String.self, forKey: .originCountry)
+
+    }
+    
 }
