@@ -54,7 +54,48 @@ struct Movie: Codable {
         case releaseDate = "release_date"
         case revenue
         case runTime = "runtime"
+        case spokenLanguages = "spoken_languages"
+        case status
+        case tagLine = "tagline"
+        case title
+        case video
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: MovieCodingKeys.self)
+        
+        isAdult              = try container.decode(Bool.self, forKey: .isAdult)
+        id                   = try container.decode(Int.self, forKey: .id)
+        backDropPath         = try container.decode(String.self, forKey: .backDropPath)
+        belongToCollection   = try container.decode(String.self, forKey: .belongToCollection) as AnyObject
+        budget               = try container.decode(Int.self, forKey: .budget)
+        genres               = try container.decode([Genre].self, forKey: .genres)
+        homePage             = try container.decode(String.self, forKey: .homePage)
+        imdbId               = try container.decode(String.self, forKey: .imdbId)
+        originalLanguage     = try container.decode(String.self, forKey: .originalLanguage)
+        originalTitle        = try container.decode(String.self, forKey: .originalTitle)
+        overView             = try container.decode(String.self, forKey: .overView)
+        popularity           = try container.decode(UInt.self, forKey: .popularity)
+        posterPath           = try container.decode(String.self, forKey: .posterPath)
+        producationCopanies  = try container.decode([ProductionCompany].self, forKey: .producationCopanies)
+        producationCountries = try container.decode([Country].self, forKey: .producationCountries)
+        releaseDate          = try container.decode(Date.self, forKey: .releaseDate)
+        revenue              = try container.decode(Int.self, forKey: .revenue)
+        runTime              = try container.decode(Int.self, forKey: .runTime)
+        spokenLanguages      = try container.decode(Language.self, forKey: .spokenLanguages)
+        status               = try container.decode(Status.self, forKey: .status)
+        tagLine              = try container.decode(String.self, forKey: .tagLine)
+        tagLine              = try container.decode(String.self, forKey: .tagLine)
+        video                = try container.decode(Bool.self, forKey: .video)
+        voteAverage          = try container.decode(UInt.self, forKey: .voteAverage)
+        voteCount            = try container.decode(Int.self, forKey: .voteCount)
+
+        
+    }
+    
+    
 }
 
 
@@ -72,7 +113,7 @@ struct Language: Codable {
     var name: String
 }
 
-enum Status: String {
+enum Status: String, Codable {
     case Rumored, Planned,InProduction, PostProduction, Released, Canceled
 }
 
