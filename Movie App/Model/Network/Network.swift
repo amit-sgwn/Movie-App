@@ -15,5 +15,12 @@ struct Network: Codable {
     var name: String?
     var originCountry: String?
     
+    enum NetworkCodingKey: String, CodingKey {
+        case headquarters
+        case homePage = "homepage"
+        case id
+        case name
+        case originCountry = "origin_country"
+    }
     
 }
