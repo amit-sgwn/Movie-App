@@ -17,7 +17,9 @@ struct Company: Codable {
     var logoPath: String?
     var name: String?
     var originCountry: String?
-    var parentCompany: Company?
+    
+    //FIX-ME:- One parent company is allowed
+    var parentCompany: [Company]?
     
     enum CompanyCodingKeys: String, CodingKey {
         case id
@@ -40,7 +42,7 @@ struct Company: Codable {
         logoPath = try container.decode(String.self, forKey: .logoPath)
         name = try container.decode(String.self, forKey: .name)
         originCountry = try container.decode(String.self, forKey: .originCountry)
-        parentCompany = try container.decode(String.self, forKey: .parentCompany)
+        parentCompany = try container.decode([Company].self, forKey: .parentCompany)
 
         
     }

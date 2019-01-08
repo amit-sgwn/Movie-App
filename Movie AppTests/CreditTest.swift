@@ -5,7 +5,7 @@
 //  Created by Amit Kumar on 07/01/19.
 //  Copyright © 2019 IndusUnicorn. All rights reserved.
 //
-
+import XCTest
 import Foundation
 @testable import Movie_App
  

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie: Codable {
+struct Movie {
     
     var isAdult: Bool
     var backDropPath : String?
@@ -64,6 +64,11 @@ struct Movie: Codable {
         case voteCount = "vote_count"
     }
     
+ 
+    
+}
+
+extension Movie: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: MovieCodingKeys.self)
         
@@ -92,10 +97,7 @@ struct Movie: Codable {
         video                = try container.decode(Bool.self, forKey: .video)
         voteAverage          = try container.decode(UInt.self, forKey: .voteAverage)
         voteCount            = try container.decode(Int.self, forKey: .voteCount)
-
-        
     }
-    
     
 }
 
