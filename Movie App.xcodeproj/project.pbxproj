@@ -22,6 +22,7 @@
 		B25B2F0B21E397E400FA908F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B2F0A21E397E400FA908F /* Network.swift */; };
 		B25B2F0D21E46B1F00FA908F /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B2F0C21E46B1F00FA908F /* NetworkTest.swift */; };
 		B25B2F0F21E4E3FC00FA908F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B2F0E21E4E3FC00FA908F /* Person.swift */; };
+		B25B2F1121E4E85A00FA908F /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B2F1021E4E85A00FA908F /* PersonTest.swift */; };
 		B2944641217644E0008011FC /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2944640217644E0008011FC /* ApiKeys.swift */; };
 		B2944643217644F9008011FC /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2944642217644F9008011FC /* ApiManager.swift */; };
 		B2962C0421DF466F00F06A4C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2962C0321DF466F00F06A4C /* Company.swift */; };
@@ -66,6 +67,7 @@
 		B25B2F0A21E397E400FA908F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B25B2F0C21E46B1F00FA908F /* NetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		B25B2F0E21E4E3FC00FA908F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B25B2F1021E4E85A00FA908F /* PersonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
 		B2944640217644E0008011FC /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		B2944642217644F9008011FC /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		B2962C0321DF466F00F06A4C /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				B25B2F0121E331FA00FA908F /* Info.plist */,
 				B25B2F0721E3321600FA908F /* CreditTest.swift */,
 				B25B2F0C21E46B1F00FA908F /* NetworkTest.swift */,
+				B25B2F1021E4E85A00FA908F /* PersonTest.swift */,
 			);
 			path = "Movie AppTests";
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			files = (
 				B25B2F0821E3321600FA908F /* CreditTest.swift in Sources */,
 				B25B2F0D21E46B1F00FA908F /* NetworkTest.swift in Sources */,
+				B25B2F1121E4E85A00FA908F /* PersonTest.swift in Sources */,
 				B25B2F0021E331FA00FA908F /* Movie_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
