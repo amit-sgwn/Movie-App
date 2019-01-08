@@ -23,6 +23,29 @@ class NetworkTest: XCTestCase {
         super.tearDown()
     }
 
+    func testNilCases() {
+        XCTAssertNil(network)
+    }
  
+    func testDecodingStandardType() {
+        let json = """
+        {
+            "headquarters": "Los Gatos, California, United States",
+            "homepage": "http://www.netflix.com",
+            "id": 213,
+            "name": "Netflix",
+            "origin_country": "US"
+        }
+        """.data(using: .utf8)!
+        
+        network = try! JSONDecoder().decode(Network.self, from: json)
+        
+        XCTAssertEqual(network.name, "Netflix")
+        XCTAssertEqual(network.originCountry, "US")
+        XCTAssertEqual(network.homePage, "http://www.netflix.com")
+        XCTAssertEqual(network.headquarters, "Los Gatos, California, United States")
+        XCTAssertEqual(network.id, 213)
+        
+    }
 
 }
