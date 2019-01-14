@@ -9,22 +9,26 @@
 import Foundation
 
 
-struct Person {
+struct Person: Codable {
     
-    var birthDay: String?
-    var knownForDepartment: String?
-    var name: String?
-    var id: Int?
+    var birthDay: String
+    var knownForDepartment: String
+    var name: String
+    var id: Int
     var deathDay: String?
-    var alsoKnownAs: String?
-    var gender: Gender
-    var bioGraphy: String?
-    var popularity: UInt
-    var placeOfBirth: String?
-    var profilePath: String?
-    var adult: Bool?
-    var imdbId: String?
+    var alsoKnownAs: [String]?
+    var gender: Int//Gender
+    var bioGraphy: String
+    var popularity: Float
+    var placeOfBirth: String
+    var profilePath: String
+    var adult: Bool
+    var imdbId: String
     var homePage: String?
+    
+    
+//    private var _homepage: String?
+//    private var _deathDay: String?
     
     enum CodingKeys: String, CodingKey {
         
@@ -46,29 +50,6 @@ struct Person {
     }
 }
 
-
-extension Person: Decodable {
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        birthDay           = try container.decode(String.self, forKey: .birthDay)
-        id                 = try container.decode(Int.self, forKey: .id)
-        knownForDepartment = try container.decode(String.self, forKey: .knownForDepartment)
-        name               = try container.decode(String.self, forKey: .name)
-        alsoKnownAs              = try container.decode(String.self, forKey: .alsoKnownAs)
-        gender              = try container.decode(Gender.self, forKey: .gender)
-        bioGraphy              = try container.decode(String.self, forKey: .bioGraphy)
-        popularity              = try container.decode(UInt.self, forKey: .popularity)
-        placeOfBirth              = try container.decode(String.self, forKey: .placeOfBirth)
-        profilePath              = try container.decode(String.self, forKey: .profilePath)
-        adult              = try container.decode(Bool.self, forKey: .adult)
-        imdbId              = try container.decode(String.self, forKey: .imdbId)
-        homePage              = try container.decode(String.self, forKey: .homePage)
-        deathDay              = try container.decode(String.self, forKey: .deathDay)
-
-    }
-}
 
 enum Gender: Int,Codable {
     case male = 0,female,Other

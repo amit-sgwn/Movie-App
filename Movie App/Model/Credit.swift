@@ -18,7 +18,7 @@ struct Credit: Codable {
     var id: String?
     var person: Person?
     
-    enum CreditCodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case creditType = "credit_type"
         case department
         case job
@@ -28,19 +28,8 @@ struct Credit: Codable {
         case person
     }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CreditCodingKeys.self)
-        
-        id = try container.decode(String.self, forKey: .id)
-        department = try container.decode(String.self, forKey: .department)
-        job = try container.decode(String.self, forKey: .job)
-        creditType = try container.decode(String.self, forKey: .creditType)
-        media = try container.decode(Media.self, forKey: .media)
-        mediaType = try container.decode(String.self, forKey: .mediaType)
-        person = try container.decode(Person.self, forKey: .person)
-
-    }
 }
+
 
 
 struct Media: Codable {
@@ -51,7 +40,7 @@ struct Media: Codable {
     var episodes: [Episode]?
     var seasons: [Season]?
     
-    enum MediaCodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case name
         case originalName = "original_name"
@@ -60,16 +49,5 @@ struct Media: Codable {
         case seasons
     }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: MediaCodingKeys.self)
-
-        id = try container.decode(Int.self, forKey: .id)
-        name = try container.decode(String.self, forKey: .name)
-        originalName = try container.decode(String.self, forKey: .originalName)
-        character = try container.decode(String.self, forKey: .character)
-        episodes = try container.decode([Episode].self, forKey: .episodes)
-        seasons = try container.decode([Season].self, forKey: .seasons)
-
-    }
 }
 
