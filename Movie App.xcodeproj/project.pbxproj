@@ -27,6 +27,7 @@
 		B2944643217644F9008011FC /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2944642217644F9008011FC /* ApiManager.swift */; };
 		B2962C0421DF466F00F06A4C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2962C0321DF466F00F06A4C /* Company.swift */; };
 		B2962C0721DF4A1900F06A4C /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2962C0621DF4A1900F06A4C /* Credit.swift */; };
+		B2B359C9226A2EA8000ACCBB /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B359C8226A2EA8000ACCBB /* NetworkTests.swift */; };
 		B2C3A57E21722AE70047923E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3A57D21722AE70047923E /* UserModel.swift */; };
 		B2E158892171B192007C8A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E158882171B192007C8A93 /* AppDelegate.swift */; };
 		B2E1588B2171B192007C8A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E1588A2171B192007C8A93 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		B2944642217644F9008011FC /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		B2962C0321DF466F00F06A4C /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		B2962C0621DF4A1900F06A4C /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		B2B359C8226A2EA8000ACCBB /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		B2C3A57D21722AE70047923E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B2E158852171B192007C8A93 /* Movie App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E158882171B192007C8A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		B25B2EFE21E331FA00FA908F /* Movie AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				B2B359C7226A2D8E000ACCBB /* ModelTest */,
 				B25B2EFF21E331FA00FA908F /* Movie_AppTests.swift */,
 				B25B2F0121E331FA00FA908F /* Info.plist */,
 				B25B2F0721E3321600FA908F /* CreditTest.swift */,
@@ -178,6 +181,14 @@
 				B25B2F0E21E4E3FC00FA908F /* Person.swift */,
 			);
 			path = Person;
+			sourceTree = "<group>";
+		};
+		B2B359C7226A2D8E000ACCBB /* ModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				B2B359C8226A2EA8000ACCBB /* NetworkTests.swift */,
+			);
+			path = ModelTest;
 			sourceTree = "<group>";
 		};
 		B2E1587C2171B192007C8A93 = {
@@ -377,6 +388,7 @@
 			files = (
 				B25B2F0821E3321600FA908F /* CreditTest.swift in Sources */,
 				B25B2F0D21E46B1F00FA908F /* NetworkTest.swift in Sources */,
+				B2B359C9226A2EA8000ACCBB /* NetworkTests.swift in Sources */,
 				B25B2F1121E4E85A00FA908F /* PersonTest.swift in Sources */,
 				B25B2F0021E331FA00FA908F /* Movie_AppTests.swift in Sources */,
 			);
