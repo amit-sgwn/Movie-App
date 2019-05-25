@@ -30,6 +30,14 @@ class NetworkTests: XCTestCase {
 }
 """.data(using: .utf8)!
     
+    let failureJson = """
+{
+"status_message": "Invalid API key: You must be granted a valid key.",
+"success": false,
+"status_code": 7
+}
+""".data(using: .utf8)!
+    
     override func setUp() {
         super.setUp()
     }
@@ -45,6 +53,12 @@ class NetworkTests: XCTestCase {
     
     func testNetworkWithInvalidJsonInitFail() {
         let network = try? JSONDecoder().decode(Network.self, from: invalidJson)
+        XCTAssertNil(network)
+    }
+    
+    //MARK: Failure cases
+    func test_401_ResponseRecieved() {
+        let network = try? JSONDecoder().decode(Network.self, from: failureJson)
         XCTAssertNil(network)
     }
 }
