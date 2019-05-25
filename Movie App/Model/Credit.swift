@@ -10,7 +10,26 @@ import Foundation
 
 struct Credit: Codable {
     
+    var creditType: String?
+    var department: String?
+    var job: String?
+    var media: Media?
+    var mediaType: String?
+    var id: String?
+    var person: Person?
+    
+    enum CodingKeys: String, CodingKey {
+        case creditType = "credit_type"
+        case department
+        case job
+        case media
+        case mediaType = "media_type"
+        case id
+        case person
+    }
+    
 }
+
 
 
 struct Media: Codable {
@@ -18,38 +37,17 @@ struct Media: Codable {
     var name: String?
     var originalName: String?
     var character: String?
-    var episodes: [Episode]
+    var episodes: [Episode]?
     var seasons: [Season]?
-}
-
-
-struct Season: Codable {
-    var airDate: String?
-    var posterPath: String?
-    var seasonNumber: Int?
     
-    enum SeasonCodingKeys: String, CodingKey {
-        case airDate = "air_date"
-        case posterPath = " poster_path"
-        case seasonNumber = "season_number"
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case originalName = "original_name"
+        case character
+        case episodes
+        case seasons
     }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: SeasonCodingKeys.self)
-        
-        airDate = try container.decode(String.self, forKey: .airDate)
-        posterPath = try container.decode(String.self, forKey: .posterPath)
-        seasonNumber = try container.decode(Int.self, forKey: .seasonNumber)
-    }
 }
 
-
-struct Person: Codable {
-    var name: String?
-    var id: Int?
-}
-
-
-struct Episode: Codable {
-    
-}

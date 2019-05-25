@@ -35,7 +35,7 @@ struct User: Codable {
         userName = try container.decode(String.self, forKey: .userName)
         avatar = try container.decode(Avatar.self, forKey: .avatar)
         id = try container.decode(Int.self, forKey: .id)
-        userName = try container.decode(String.self, forKey: .userName)
+        name = try container.decode(String.self, forKey: .name)
         includeAdult = try container.decode(Bool.self, forKey: .includeAdult)
         countryCode = try container.decode(String.self, forKey: .countryCode)
         languageCode = try container.decode(String.self, forKey: .languageCode)

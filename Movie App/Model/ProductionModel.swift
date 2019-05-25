@@ -21,10 +21,20 @@ struct ProductionCompany: Codable {
     var logoPath : String?
     var originCountry: String
     
-    enum CodingKeys: String, CodingKey {
+    enum ProductionCompanyCodingKeys: String, CodingKey {
         case logoPath = "logo_path"
         case originCountry =  "origin_country"
         case id
         case name
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: ProductionCompanyCodingKeys.self)
+        
+        name = try container.decode(String.self, forKey: .name)
+        id = try container.decode(Int.self, forKey: .id)
+        logoPath = try container.decode(String.self, forKey: .logoPath)
+        originCountry = try container.decode(String.self, forKey: .originCountry)
+
     }
 }
